@@ -12,31 +12,6 @@ RISCV-Unified-Discovery DEFINITIONS AUTOMATIC TAGS ::=
 BEGIN
 ....
 
-The header is followed by the import segment for the `SignedData` type from Cryptographic 
-Message Syntax. This is used to provide the envelope for message authentication.
-....
-IMPORTS
-  SignedData
-  FROM CryptographicMessageSyntax-2010
-    { iso(1) member-body(2) us(840) rsadsi(113549)
-          pkcs(1) pkcs-9(9) smime(16) modules(0) id-mod-cms-2009(58) };
-....
-
-The envelope type follows the import segment. Signing of the message is optional.
-
-....
-  UnifiedDiscoveryEnvelop ::= SignedData
-....
-
-The content type in the `SignedData` is encoded as an object identifier. Two such 
-identifiers are specified. Each corresponds to an encoding scheme.
-
-....
-  id-UnifiedDiscovery-UPERencoded OBJECT IDENTIFIER ::= {
-  ...
-  id-UnifiedDiscovery-DERencoded OBJECT IDENTIFIER ::= {
-....
-
 In the value notations, vendors can specify the JEDEC manufacturers identifier to identify 
 themselves.  The `JEDEC-ID` type provides the short-hand type.
 

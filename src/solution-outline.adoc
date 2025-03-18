@@ -58,8 +58,7 @@ additional CSR are required.
 
 The discovery data encoded uses standardized encoding rules (see ITU-T X.690 and ISO 
 8825).  For in-memory representations, the unaligned packed encoding rules (unaligned PER, 
-see ITU-T X.691) are used. The configuration data can (optionally) be cryptographically 
-signed.
+see ITU-T X.691) are used.
 
 Target software (usually firmware) that performs discovery will read the uPER-encoded 
 message to retrieve the relevant configuration elements. The message can be decoded either 
@@ -83,10 +82,6 @@ The unified discovery mechanism for RISC-V builds on the following technology st
 
 . RISC-V International specific guidelines to allow the efficient aggregation of RISC-V 
 global and vendor-specific data elements without a central registration authority
-
-. RISC-V International specific guidelines for the encoding of detached signatures 
-(PKCS#7/CMS) using Packed Encoding Rules
-
 
 NOTE: The benefits of using X.680 and X.693 over vendor-specific (e.g. Google Protobuf, 
 Apache Avro etc.) marshalling frameworks are the fact that these are international 

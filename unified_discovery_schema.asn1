@@ -5,31 +5,6 @@
 
 RISCV-Unified-Discovery DEFINITIONS AUTOMATIC TAGS ::=
 BEGIN
-IMPORTS
-  SignedData
-  FROM CryptographicMessageSyntax-2010
-    { iso(1) member-body(2) us(840) rsadsi(113549)
-          pkcs(1) pkcs-9(9) smime(16) modules(0) id-mod-cms-2009(58) };
-
-  -- Each Unified Discovery message is wrapped in CMS (Cryptographic
-  -- Message Syntax) SignedData envelope to provide support for
-  -- message authentication.  Signing of the message is optional.
-  -- Cf. Unified Discovery specification, section [TODO: 1.x].
-  UnifiedDiscoveryEnvelope ::= SignedData
-
-  -- The content type in CMS is encoded as an object identifier.
-  -- Unified Discovery specifies two such content types:
-  --  1. UPER-encoded U/D  (cf. section [TODO])
-  --  2. DER-encoded U/D   (cf. section [TODO])
-  id-UnifiedDiscovery-UPERencoded OBJECT IDENTIFIER ::= {
-         iso(1) identified-organization(3) dod(6) internet(1)
-	 private(4) enterprise(1) 57194
-	 unified-discovery(1) uper-encoded-content(2) }
-  id-UnifiedDiscovery-DERencoded OBJECT IDENTIFIER ::= {
-         iso(1) identified-organization(3) dod(6) internet(1)
-	 private(4) enterprise(1) 57194
-	 unified-discovery(1) uper-encoded-content(1) }
-
   -- RISC-V sometimes uses JEDEC manufacturers identification code to
   -- identify implementers.  Each JEDEC manufacturers identification
   -- code (see JEDEC JEP106) is made up of one or more 8 bit fields
