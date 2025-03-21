@@ -1,4 +1,4 @@
 == The mconfigptr CSR
 
-The machine config pointer (mconfigptr) CSR provides the base-address of the
-binary-encoded representation. The mconfigptr is a machine-mode CSR.
+NOTE: The mconfigptr CSR is defined in the
+https://github.com/riscv/riscv-isa-manual/[RISC-V Instruction Set Manual: Volume II].
