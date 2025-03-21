@@ -55,6 +55,8 @@ hardware. The par-hart mconfigptr CSR contains the physical address.
 The base-address of the binary-encoded representation is accessible through the single 
 CSR, i.e. the mconfigptr CSR.
 NOTE: The mconfigptr CSR definition mandates an alignment of the base-address.
+NOTE: The base-address cannot be zero.  Zero in mconfigptr CSR means that the
+discovery data is not accessible through the CSR.
 
 The discovery data encoded uses standardized encoding rules (see ITU-T X.690 and ISO 
 8825).  For in-memory representations, the unaligned packed encoding rules (unaligned PER, 
