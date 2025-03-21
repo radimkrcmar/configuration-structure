@@ -53,8 +53,8 @@ hindering the successful parsing of the configuration.
 The discovery data is made available to software within the physical address space of the 
 hardware. The par-hart mconfigptr CSR contains the physical address.
 The base-address of the binary-encoded representation is accessible through the single 
-CSR, i.e. the mconfigptr CSR.  No other ISA considerations, beyond the provision of an 
-additional CSR are required.
+CSR, i.e. the mconfigptr CSR.
+NOTE: The mconfigptr CSR definition mandates an alignment of the base-address.
 
 The discovery data encoded uses standardized encoding rules (see ITU-T X.690 and ISO 
 8825).  For in-memory representations, the unaligned packed encoding rules (unaligned PER, 
